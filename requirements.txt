@@ -1,0 +1,6 @@
+transformer_lens>=0.6.0
+torch>=1.13.0
+matplotlib>=3.5.0
+seaborn>=0.12.0
+numpy>=1.22.0
+einops>=0.6.0
