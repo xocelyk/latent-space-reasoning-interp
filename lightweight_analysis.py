@@ -131,7 +131,8 @@ class LightweightAnalyzer:
         print(f"V shape: {V_selected.shape}")
         
         # Create projection matrix in d_model space
-        P = V_selected.T @ V_selected  # Shape: [d_model, d_model]
+        # V_selected has shape [d_model, k], so we project using V @ V^T
+        P = V_selected @ V_selected.T  # Shape: [d_model, d_model]
         print(f"Projection matrix shape: {P.shape}")
         
         return P
